@@ -3,57 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Básico</title>
-    <!-- Link para o Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Servidor Offline</title>
     <style>
-        /* Estilos personalizados */
         body {
-            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            text-align: center;
         }
-
-        header {
-            background-color: #007bff;
-            color: white;
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
         }
-
-        footer {
-            background-color: #f1f1f1;
+        h1 {
+            color: #d9534f;
         }
-
-        .main-content {
+        button {
             margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #5bc0de;
+            border: none;
+            border-radius: 4px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #31b0d5;
         }
     </style>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="text-center py-3">
-        <h1>Bem-vindo ao Meu Site</h1>
-        <p>Exemplo básico com HTML, CSS e Bootstrap</p>
-    </header>
+    <div class="container">
+        <h1>Servidor Offline</h1>
+        <p>Não foi possível conectar ao servidor. Por favor, verifique sua conexão com a internet ou tente acessar novamente mais tarde.</p>
+        <button onclick="tentarNovamente()">Tentar Novamente</button>
+    </div>
 
-    <!-- Seção Principal -->
-    <main class="container main-content">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                <h2>Sobre Nós</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna quis nulla egestas gravida. Curabitur ut sapien quis nulla blandit malesuada. Aliquam erat volutpat. Integer vel dui nec est efficitur cursus.</p>
-                <p>Suspendisse potenti. Mauris nec erat vel libero ultrices ullamcorper sed sed augue. Vivamus ac dui nec sapien efficitur tincidunt. Integer pharetra ex a ligula venenatis, sit amet pharetra nunc dictum.</p>
-            </div>
-        </div>
-    </main>
-
-    <!-- Seção de Contato -->
-    <footer class="text-center py-4">
-        <h4>Contato</h4>
-        <p>Email: contato@exemplo.com</p>
-        <p>Telefone: (41) 99878-5614</p>
-    </footer>
-
-    <!-- Scripts do Bootstrap e jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function tentarNovamente() {
+            location.reload();
+        }
+    </script>
 </body>
 </html>
